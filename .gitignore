@@ -3,6 +3,7 @@
 !.bashrc
 !.gitignore
 !.gitconfig
+!.git-completion
 !.README.md
 !.vimrc
 !.vim
