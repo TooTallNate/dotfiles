@@ -1,6 +1,7 @@
 *
 !.bash_profile
 !.bashrc
+!.dir_colors
 !.gitignore
 !.gitconfig
 !.git-completion
