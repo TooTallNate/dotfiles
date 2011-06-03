@@ -1,3 +1,5 @@
+export EDITOR="vim"
+
 # Colored `grep` output
 export GREP_OPTIONS='--color=always'
 
