@@ -18,7 +18,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # for `ls` (GNU coreutils, homebrew)
 if [ "$TERM" != "dumb" ]; then
-    export LS_OPTIONS='--color=auto'
+    export LS_OPTIONS='--color=auto --file-type'
     eval `dircolors ~/.dir_colors`
 fi
 
