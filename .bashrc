@@ -1,10 +1,11 @@
-export EDITOR="vim"
-
 # Colored `grep` output
 export GREP_OPTIONS='--color=always'
 
 # Make locally installed npm modules' bin files be available in $PATH
 export PATH="./node_modules/.bin:/usr/local/bin:$PATH"
+
+# Set the EDITOR after we set the PATH, in case of a locally compiled vim
+export EDITOR=`which vim`
 
 # Git tab completion
 source ~/.git-completion
