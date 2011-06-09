@@ -27,3 +27,11 @@ alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
 
+
+# For work...
+# Be sure to add these vars to the '/etc/sudoers' file so that they
+# are still used when we call 'sudo'
+export LB_DEBUG=1
+export LB_EMAIL='nate@learnboost.com'
+export LB_SEND_EMAIL=1
+export LB_NO_REPLICA=1
