@@ -26,7 +26,8 @@ fi
 alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
-
+alias gits="git status"
+alias gitd="git diff"
 
 # For work...
 # Be sure to add these vars to the '/etc/sudoers' file so that they
