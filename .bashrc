@@ -11,7 +11,7 @@ export EDITOR=`which vim`
 source ~/.git-completion
 
 # command prompt
-export PS1='\[\033[32m\]∞\[\033[00m\] \w \[\033[90m\]`git name-rev HEAD 2>/dev/null|sed "s#HEAD\ \(.*\)#(\1)\ #"`\[\033[37m\]$\[\033[00m\] '
+export PS1='\[\033[32m\]∞\[\033[00m\] \w \[\033[90m\](`git name-rev --name-only HEAD 2>/dev/null`)\[\033[37m\] $\[\033[00m\] '
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
