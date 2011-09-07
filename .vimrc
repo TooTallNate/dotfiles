@@ -73,7 +73,7 @@ vnoremap <tab> %
 
 " Wrap column settings
 set wrap
-set textwidth=79
+set textwidth=82
 set formatoptions=qrn1
 set colorcolumn=85
 
