@@ -29,6 +29,9 @@ alias l='ls $LS_OPTIONS -lAhF'
 alias gits="git status"
 alias gitd="git diff"
 
+# Node.js, wrapped in rlwrap
+alias node='NODE_NO_READLINE=1 rlwrap node'
+
 # For work...
 # Be sure to add these vars to the '/etc/sudoers' file so that they
 # are still used when we call 'sudo'
