@@ -2,7 +2,7 @@
 export GREP_OPTIONS='--color=always'
 
 # Make locally installed npm modules' bin files be available in $PATH
-export PATH="./node_modules/.bin:/usr/local/bin:$PATH"
+export PATH="./node_modules/.bin:/opt/local/libexec/gnubin:/usr/local/bin:$PATH"
 
 # Set the EDITOR after we set the PATH, in case of a locally compiled vim
 export EDITOR=`which vim`
