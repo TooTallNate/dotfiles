@@ -38,3 +38,5 @@ export LB_EMAIL='nate@learnboost.com'
 export LB_SEND_EMAIL=1
 export LB_NO_REPLICA=1
 export LB_MONGOEXPORT_FLAGS='--db lb-dev'
+
+alias pr='open http://github.com/learnboost/learnboost/pull/new/`git name-rev --name-only HEAD`'
