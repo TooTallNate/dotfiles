@@ -33,10 +33,11 @@ alias gitd="git diff"
 # Be sure to add these vars to the '/etc/sudoers' file so that they
 # are still used when we call 'sudo'
 export LB_DEBUG=1
-export LB_PROFILE=1
 export LB_EMAIL='nate@learnboost.com'
-export LB_SEND_EMAIL=1
-export LB_NO_REPLICA=1
 export LB_MONGOEXPORT_FLAGS='--db lb-dev'
+export LB_NO_REPLICA=1
+export LB_PORT=3000
+export LB_PROFILE=1
+export LB_SEND_EMAIL=1
 
 alias pr='open http://github.com/learnboost/learnboost/pull/new/`git name-rev --name-only HEAD`'
