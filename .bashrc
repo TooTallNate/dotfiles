@@ -41,4 +41,11 @@ export LB_NO_REPLICA=1
 export LB_PROFILE=1
 export LB_SEND_EMAIL=1
 
-alias pr='open http://github.com/learnboost/learnboost/pull/new/`git name-rev --name-only HEAD`'
+function pr () {
+  local repo=`git remote -v | grep -m 1 "(push)" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
+  local branch=`git name-rev --name-only HEAD`
+  echo "... creating pull request for branch \"$branch\" in \"$repo\""
+  open https://github.com/$repo/pull/new/$branch
+}
+
+export -f pr
