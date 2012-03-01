@@ -30,8 +30,6 @@ alias gits="git status"
 alias gitd="git diff"
 
 # For work...
-# Be sure to add these vars to the '/etc/sudoers' file so that they
-# are still used when we call 'sudo'
 export DEBUG='up,lb:*'
 export LB_APP_PORT=3000
 export LB_DEBUG=1
@@ -41,11 +39,12 @@ export LB_NO_REPLICA=1
 export LB_PROFILE=1
 export LB_SEND_EMAIL=1
 
+# Create a GitHub pull request from the current git branch
+# From: http://www.devthought.com/code/create-a-github-pull-request-from-the-terminal
 function pr () {
   local repo=`git remote -v | grep -m 1 "(push)" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
   local branch=`git name-rev --name-only HEAD`
   echo "... creating pull request for branch \"$branch\" in \"$repo\""
   open https://github.com/$repo/pull/new/$branch
 }
-
 export -f pr
