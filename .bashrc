@@ -30,7 +30,7 @@ alias gits="git status"
 alias gitd="git diff"
 
 # For work...
-export DEBUG='up,lb:*'
+export DEBUG='up'
 export LB_APP_PORT=3000
 export LB_DEBUG=1
 export LB_EMAIL='nate@learnboost.com'
