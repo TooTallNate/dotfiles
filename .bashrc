@@ -64,3 +64,8 @@ function pr () {
   open https://github.com/$repo/pull/new/$branch
 }
 export -f pr
+
+function fwd () {
+  sudo ipfw add fwd 127.0.0.1,$3 tcp from any to any $1 in
+}
+export -f fwd
