@@ -4,6 +4,11 @@ export GREP_OPTIONS='--color=auto'
 # Make locally installed npm modules' bin files be available in $PATH
 export PATH="./node_modules/.bin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Make gnu coreutils from Homebrew come first in the PATH on OS X
+if type brew >/dev/null 2>&1; then
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
+
 # Set the EDITOR after we set the PATH, in case of a locally compiled vim
 export EDITOR=`which vim`
 
