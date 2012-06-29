@@ -23,7 +23,7 @@ export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # for `ls` (GNU coreutils, homebrew)
-if [ "$TERM" != "dumb" ]; then
+if type dircolors >/dev/null 2>&1; then
     export LS_OPTIONS='--color=auto --file-type'
     eval `dircolors ~/.dir_colors`
 fi
