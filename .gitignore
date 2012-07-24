@@ -25,3 +25,6 @@
 /.sqlite_history
 /.subversion
 /.viminfo
+/.Xauthority
+/.wireshark*
+/.Trash
