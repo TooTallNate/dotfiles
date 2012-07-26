@@ -35,7 +35,6 @@ alias gits="git status"
 alias gitd="git diff"
 
 # For work...
-export DEBUG='up lb:* cs:*'
 export NODE_ENV='development'
 
 export LB_APP_PORT=3000
