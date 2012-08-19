@@ -9,6 +9,11 @@ if type brew >/dev/null 2>&1; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
 
+# I have gcc-4.7.1 manually compiled into /usr/gcc-4.7.1
+if [ -d "/usr/gcc-4.7.1/" ]; then
+  export PATH="$PATH:/usr/gcc-4.7.1/bin"
+fi
+
 # Set the EDITOR after we set the PATH, in case of a locally compiled vim
 export EDITOR=`which vim`
 
