@@ -33,9 +33,9 @@ if type dircolors >/dev/null 2>&1; then
     eval `dircolors ~/.dir_colors`
 fi
 
-alias ls='ls $LS_OPTIONS -hF'
-alias ll='ls $LS_OPTIONS -lhF'
-alias l='ls $LS_OPTIONS -lAhF'
+alias ls='ls $LS_OPTIONS -F'
+alias ll='ls $LS_OPTIONS -lF'
+alias l='ls $LS_OPTIONS -lAF'
 alias gits="git status"
 alias gitd="git diff"
 
