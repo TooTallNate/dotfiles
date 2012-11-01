@@ -7,6 +7,7 @@ export PATH="./node_modules/.bin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/l
 # Make gnu coreutils from Homebrew come first in the PATH on OS X
 if type brew >/dev/null 2>&1; then
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  . `brew --prefix`/etc/profile.d/z.sh
 fi
 
 # I have gcc-4.7.1 manually compiled into /usr/gcc-4.7.1
