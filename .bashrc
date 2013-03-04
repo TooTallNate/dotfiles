@@ -1,3 +1,7 @@
+
+# Use a vi-style command line editing interface
+set -o vi
+
 # Colored `grep` output
 export GREP_OPTIONS='--color=auto'
 
