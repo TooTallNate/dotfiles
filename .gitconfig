@@ -5,3 +5,5 @@
 	ui = true
 [github]
 	user = TooTallNate
+[push]
+	default = matching
