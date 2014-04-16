@@ -6,4 +6,4 @@
 [github]
 	user = TooTallNate
 [push]
-	default = matching
+	default = current
