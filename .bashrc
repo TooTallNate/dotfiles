@@ -47,26 +47,6 @@ alias gitd="git diff"
 # For work...
 export NODE_ENV='development'
 
-export LB_APP_PORT=3000
-export LB_DEBUG=1
-export LB_EMAIL='nate@learnboost.com'
-export LB_MONGOEXPORT_FLAGS='--db lb-dev'
-export LB_NO_REPLICA=1
-export LB_PROFILE=1
-export LB_SEND_EMAIL=1
-
-export CS_PROXY_PORT="3000"
-export CS_APP_HOST="dev.codestre.am"
-export CS_APP_PORT="3004"
-export CS_GET_HOST="get.dev.codestre.am"
-export CS_GET_PORT="3007"
-export CS_STREAM_PORT="3005"
-export CS_STREAM_HOST="stream.dev.codestre.am"
-export CS_PLAY_PORT="3006"
-export CS_PLAY_HOST="play.dev.codestre.am"
-export CS_SSL=""
-export CS_MONGODB_URI="mongodb://localhost/codestream"
-
 
 
 # Create a GitHub pull request from the current git branch
