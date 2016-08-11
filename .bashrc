@@ -1,3 +1,6 @@
+# This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Use a vi-style command line editing interface
 set -o vi
@@ -44,17 +47,4 @@ alias l='ls $LS_OPTIONS -lAF'
 alias gits="git status"
 alias gitd="git diff"
 
-# For work...
 export NODE_ENV='development'
-
-
-
-# Create a GitHub pull request from the current git branch
-# From: http://www.devthought.com/code/create-a-github-pull-request-from-the-terminal
-function pr () {
-  local repo=`git remote -v | grep -m 1 "(push)" | sed -e "s/.*github.com[:/]\(.*\)\.git.*/\1/"`
-  local branch=`git name-rev --name-only HEAD`
-  echo "... creating pull request for branch \"$branch\" in \"$repo\""
-  open https://github.com/$repo/pull/new/$branch
-}
-export -f pr
