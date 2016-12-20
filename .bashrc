@@ -48,3 +48,5 @@ alias gits="git status"
 alias gitd="git diff"
 
 export NODE_ENV='development'
+export GOPATH="$HOME/work"
+export PATH="$PATH:$GOPATH/bin"
