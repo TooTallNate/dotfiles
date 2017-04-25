@@ -7,3 +7,5 @@
 	user = TooTallNate
 [push]
 	default = current
+[core]
+	excludesfile = ~/.gitignore-global
