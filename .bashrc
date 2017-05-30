@@ -24,8 +24,33 @@ export EDITOR=`which vim`
 # Git tab completion
 source ~/.git-completion
 
+
 # command prompt
-export PS1='\[\033[32m\]㋛\[\033[00m\] \w \[\033[90m\](`git name-rev --name-only HEAD 2>/dev/null`)\[\033[36m\] ❯\[\033[00m\] '
+BLUE="\033[0;34m"
+BLUE_BG="\033[0;44m"
+DARK_BLUE="\033[1;34m"
+GREEN="\033[0;32m"
+GREEN_BG="\033[0;42m"
+DARK_GREEN="\033[1;32m"
+RED="\033[0;31m"
+RED_BG="\033[0;41m"
+DARK_RED="\033[1;31m"
+MAGENTA="\033[0;35m"
+MAGENTA_BG="\033[0;45m"
+DARK_MAGENTA="\033[1;35m"
+NO_COLOR="\033[0m"
+
+function colored_exit_code {
+  local EXIT=$?
+  if [[ $EXIT = "0" ]]; then
+    echo -e "$GREEN$EXIT"
+  else
+    echo -e "$RED$EXIT"
+  fi
+}
+
+export PS1="\n\001\$(colored_exit_code)\002 $BLUE[\t] $MAGENTA(\$(git name-rev --name-only HEAD 2>/dev/null)) $GREEN\w $DARK_GREEN\$$NO_COLOR "
+
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
