@@ -27,17 +27,11 @@ source ~/.git-completion
 
 # command prompt
 BLUE="\033[0;34m"
-BLUE_BG="\033[0;44m"
-DARK_BLUE="\033[1;34m"
+CYAN="\033[0;36m"
 GREEN="\033[0;32m"
-GREEN_BG="\033[0;42m"
 DARK_GREEN="\033[1;32m"
 RED="\033[0;31m"
-RED_BG="\033[0;41m"
-DARK_RED="\033[1;31m"
 MAGENTA="\033[0;35m"
-MAGENTA_BG="\033[0;45m"
-DARK_MAGENTA="\033[1;35m"
 NO_COLOR="\033[0m"
 
 function colored_exit_code {
@@ -49,7 +43,7 @@ function colored_exit_code {
   fi
 }
 
-export PS1="\n\001\$(colored_exit_code)\002 $BLUE[\t] $MAGENTA(\$(git name-rev --name-only HEAD 2>/dev/null)) $GREEN\w $DARK_GREEN\$$NO_COLOR "
+export PS1="\n\001\$(colored_exit_code)\002 $BLUE[\t] $CYAN\w $MAGENTA(\$(git name-rev --name-only HEAD 2>/dev/null)) $DARK_GREEN\$$NO_COLOR "
 
 
 # for `ls` (BSD, OSX)
