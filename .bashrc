@@ -36,14 +36,14 @@ NO_COLOR="\033[0m"
 
 function colored_exit_code {
   local EXIT=$?
-  if [[ $EXIT = "0" ]]; then
+  if [ $EXIT -eq 0 ]; then
     echo -e "$GREEN$EXIT"
   else
     echo -e "$RED$EXIT"
   fi
 }
 
-export PS1="\n\001\$(colored_exit_code)\002 $BLUE[\t] $CYAN\w $MAGENTA(\$(git name-rev --name-only HEAD 2>/dev/null)) $DARK_GREEN\$$NO_COLOR "
+export PS1="\n\[\001\$(colored_exit_code)\002\] \[$BLUE\][\t] \[$CYAN\]\w \[$MAGENTA\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
 
 
 # for `ls` (BSD, OSX)
