@@ -1,8 +1,11 @@
 /*
 !/.*
+/.DS_Store
+/.*_history
 /.CFUserTextEncoding
 /.adobe
 /.bash_history
+/.bash_sessions
 /.cups
 /.config
 /.cvspass
@@ -16,6 +19,7 @@
 /.jitsuconf
 /.lesshst
 /.node-gyp
+/.now.json
 /.npm
 /.npmrc
 /.rnd
