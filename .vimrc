@@ -56,7 +56,10 @@ let g:gist_clip_command = 'pbcopy'
 
 " Settings for Solarized theme
 set background=dark
-let g:solarized_termcolors=256
+if $ITERM_PROFILE == 'Light'
+  set background=light
+endif
+"let g:solarized_termcolors=256
 
 " Default search with \v
 nnoremap / /\v
