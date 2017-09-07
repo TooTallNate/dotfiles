@@ -35,7 +35,7 @@ MAGENTA="\033[0;35m"
 NO_COLOR="\033[0m"
 
 function colored_exit_code {
-  local EXIT=$?
+  local EXIT=$(printf "%03d" $?)
   if [ $EXIT -eq 0 ]; then
     echo -e "$GREEN$EXIT"
   else
