@@ -28,17 +28,21 @@ RED="\033[0;31m"
 MAGENTA="\033[0;35m"
 NO_COLOR="\033[0m"
 
+# the \001 and \002 escape sequences are the equivalent of \[ \] in the PS1,
+# but are required when executing a "lazy function" in the prompt.
+# See: https://stackoverflow.com/a/24840720/376773
 function colored_exit_code {
   local EXIT=$(printf "%03d" $?)
   if [ $EXIT -eq 0 ]; then
-    echo -e "$GREEN$EXIT"
+    printf "\001$GREEN\002"
   else
-    echo -e "$RED$EXIT"
+    printf "\001$RED\002"
   fi
+  printf "$EXIT"
+  printf "\001$NO_COLOR\002"
 }
 
-export PS1="\n\[\001\$(colored_exit_code)\002\] \[$BLUE\][\t] \[$CYAN\]\w \[$MAGENTA\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
-
+export PS1="\n\$(colored_exit_code) \[$BLUE\][\t] \[$CYAN\]\w \[$MAGENTA\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
