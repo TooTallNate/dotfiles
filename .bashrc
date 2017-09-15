@@ -13,17 +13,11 @@ if type brew >/dev/null 2>&1; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
 
-# I have gcc-4.7.1 manually compiled into /usr/gcc-4.7.1
-if [ -d "/usr/gcc-4.7.1/" ]; then
-  export PATH="$PATH:/usr/gcc-4.7.1/bin"
-fi
-
 # Set the EDITOR after we set the PATH, in case of a locally compiled vim
 export EDITOR=`which vim`
 
 # Git tab completion
 source ~/.git-completion
-
 
 # command prompt
 BLUE="\033[0;34m"
