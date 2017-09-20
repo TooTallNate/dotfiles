@@ -42,7 +42,7 @@ function colored_exit_code {
   printf "\001$NO_COLOR\002"
 }
 
-export PS1="\n\$(colored_exit_code) \[$BLUE\][\t] \[$CYAN\]\w \[$MAGENTA\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
+export PS1="\n▲ \$(colored_exit_code) \[$CYAN\]\w \[$BLUE\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
