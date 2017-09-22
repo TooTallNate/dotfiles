@@ -41,8 +41,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
 
-" Line numbers relative to current position
-set relativenumber
+" Line numbers to absolute position
+set number
 
 " Disable swap files
 set noswapfile
