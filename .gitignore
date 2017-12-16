@@ -19,9 +19,11 @@
 /.jitsuconf
 /.lesshst
 /.node-gyp
+/.now
 /.now.json
 /.npm
 /.npmrc
+/.private.env
 /.rnd
 /.sh_history
 /.shellshock
