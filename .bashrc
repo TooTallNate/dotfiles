@@ -63,3 +63,11 @@ alias gitd="git diff"
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+
+if type hub >/dev/null 2>&1; then
+  alias git=hub
+fi
+
+if [ -f ~/.private.env ]; then
+  source ~/.private.env
+fi
