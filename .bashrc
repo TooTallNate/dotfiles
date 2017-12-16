@@ -50,8 +50,8 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # for `ls` (GNU coreutils, homebrew)
 if type dircolors >/dev/null 2>&1; then
-    export LS_OPTIONS='--color=auto --file-type'
-    eval `dircolors ~/.dir_colors`
+  export LS_OPTIONS='--color=auto --file-type'
+  eval `dircolors ~/.dir_colors`
 fi
 
 alias ls='ls $LS_OPTIONS -F'
