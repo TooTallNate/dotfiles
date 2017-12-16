@@ -20,29 +20,60 @@ export EDITOR=`which vim`
 source ~/.git-completion
 
 # command prompt
-BLUE="\033[0;34m"
-CYAN="\033[0;36m"
-GREEN="\033[0;32m"
+BOLD="$(tput bold 2>/dev/null || echo '')"
+RED="$(tput setaf 1 2>/dev/null || echo '')"
+GREEN="$(tput setaf 2 2>/dev/null || echo '')"
 DARK_GREEN="\033[1;32m"
-RED="\033[0;31m"
-MAGENTA="\033[0;35m"
-NO_COLOR="\033[0m"
+YELLOW="$(tput setaf 3 2>/dev/null || echo '')"
+BLUE="$(tput setaf 4 2>/dev/null || echo '')"
+MAGENTA="$(tput setaf 5 2>/dev/null || echo '')"
+CYAN="$(tput setaf 6 2>/dev/null || echo '')"
+NO_COLOR="$(tput sgr0 2>/dev/null || echo '')"
 
 # the \001 and \002 escape sequences are the equivalent of \[ \] in the PS1,
 # but are required when executing a "lazy function" in the prompt.
 # See: https://stackoverflow.com/a/24840720/376773
-function colored_exit_code {
-  local EXIT=$(printf "%03d" $?)
-  if [ $EXIT -eq 0 ]; then
+function __ps1_colored_exit_code {
+  local exit_code=$?
+  if [ $exit_code -eq 0 ]; then
     printf "\001$GREEN\002"
   else
     printf "\001$RED\002"
   fi
-  printf "$EXIT"
+  printf "%03d" "$exit_code"
   printf "\001$NO_COLOR\002"
 }
 
-export PS1="\n▲ \$(colored_exit_code) \[$CYAN\]\w \[$BLUE\](\$(git name-rev --name-only HEAD 2>/dev/null)) \[$DARK_GREEN\]\$\[$NO_COLOR\] "
+function __ps1_bgl {
+  local cachefile="$1"
+  if [ -z "${cachefile}" ]; then
+    cachefile=~/.bgl-cache
+  fi
+  eval "$(cat "${cachefile}")"
+
+  local trend="$nightscout_trend"
+  case "${trend}" in
+    DoubleUp) trend="⇈";;
+    SingleUp) trend="↑";;
+    FortyFiveUp) trend="↗";;
+    Flat) trend="→";;
+    FortyFiveDown) trend="↘";;
+    SingleDown) trend="↓";;
+    DoubleDown) trend="⇊";;
+  esac
+
+  if [ "$nightscout_bgl" -ge "$nightscout_target_top" ]; then
+    printf "\001${YELLOW}\002"
+  elif [ "$nightscout_bgl" -le "$nightscout_target_bottom" ]; then
+    printf "\001${RED}\002"
+  else
+    printf "\001${GREEN}\002"
+  fi
+  printf "%03d %s" "${nightscout_bgl}" "${trend}"
+  printf "\001$NO_COLOR\002"
+}
+
+export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(__ps1_bgl) \[$CYAN\]\w \[$BLUE\](\$(git name-rev --name-only HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
