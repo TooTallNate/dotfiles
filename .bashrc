@@ -49,10 +49,10 @@ function __ps1_bgl {
   if [ -z "${cachefile}" ]; then
     cachefile=~/.bgl-cache
   fi
-  eval "$(cat "${cachefile}")"
+  source "${cachefile}"
 
-  local trend="$nightscout_trend"
-  case "${trend}" in
+  local trend="?"
+  case "${nightscout_trend}" in
     DoubleUp) trend="⇈";;
     SingleUp) trend="↑";;
     FortyFiveUp) trend="↗";;
