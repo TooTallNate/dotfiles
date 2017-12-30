@@ -35,13 +35,13 @@ NO_COLOR="$(tput sgr0 2>/dev/null || echo '')"
 # See: https://stackoverflow.com/a/24840720/376773
 function __ps1_colored_exit_code {
   local exit_code=$?
+  local color=
   if [ $exit_code -eq 0 ]; then
-    printf "\001$GREEN\002"
+    color="${GREEN}"
   else
-    printf "\001$RED\002"
+    color="${RED}"
   fi
-  printf "%03d" "$exit_code"
-  printf "\001$NO_COLOR\002"
+  printf "\001${color}\002%03d\001${NO_COLOR}\002" "$exit_code"
 }
 
 function __ps1_bgl {
