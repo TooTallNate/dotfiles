@@ -44,36 +44,7 @@ function __ps1_colored_exit_code {
   printf "\001${color}\002%03d\001${NO_COLOR}\002" "$exit_code"
 }
 
-function __ps1_bgl {
-  local cachefile="$1"
-  if [ -z "${cachefile}" ]; then
-    cachefile=~/.bgl-cache
-  fi
-  source "${cachefile}"
-
-  local trend="?"
-  case "${nightscout_trend}" in
-    DoubleUp) trend="⇈";;
-    SingleUp) trend="↑";;
-    FortyFiveUp) trend="↗";;
-    Flat) trend="→";;
-    FortyFiveDown) trend="↘";;
-    SingleDown) trend="↓";;
-    DoubleDown) trend="⇊";;
-  esac
-
-  if [ "$nightscout_bgl" -ge "$nightscout_target_top" ]; then
-    printf "\001${YELLOW}\002"
-  elif [ "$nightscout_bgl" -le "$nightscout_target_bottom" ]; then
-    printf "\001${RED}\002"
-  else
-    printf "\001${GREEN}\002"
-  fi
-  printf "%03d %s" "${nightscout_bgl}" "${trend}"
-  printf "\001$NO_COLOR\002"
-}
-
-export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(__ps1_bgl) \[$CYAN\]\w \[$BLUE\](\$(git name-rev --name-only HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
+export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(nightscout-ps1 2>/dev/null) \[$CYAN\]\w \[$MAGENTA\](\$(git name-rev --name-only HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
