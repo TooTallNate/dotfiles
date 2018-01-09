@@ -29,6 +29,7 @@
 /.npmrc
 /.pkg-cache
 /.private.env
+/.python-eggs
 /.rnd
 /.shellshock
 /.subversion
