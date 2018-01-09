@@ -5,7 +5,6 @@
 /.CFUserTextEncoding
 /.adobe
 /.babel.json
-/.bash_history
 /.bash_sessions
 /.cups
 /.config
@@ -15,7 +14,6 @@
 /.ec2
 /.electron
 /.fontconfig
-/.gdb_history
 /.gem
 /.htoprc
 /.hyper_plugins
@@ -32,9 +30,7 @@
 /.pkg-cache
 /.private.env
 /.rnd
-/.sh_history
 /.shellshock
-/.sqlite_history
 /.subversion
 /.viminfo
 /.Xauthority
