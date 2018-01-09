@@ -54,12 +54,7 @@ set undodir=~/.vim/undo
 let mapleader = ","
 let g:gist_clip_command = 'pbcopy'
 
-" Settings for Solarized theme
 set background=dark
-if $ITERM_PROFILE == 'Light'
-  set background=light
-endif
-"let g:solarized_termcolors=256
 
 " Default search with \v
 nnoremap / /\v
@@ -131,9 +126,6 @@ nnoremap <C-l> <C-w>l
 
 " $() shortcut
 nnoremap <leader>4 caw$(<Esc>pa)<Esc>
-
-" Color scheme
-colorscheme solarized
 
 " Markdown
 augroup mkd
