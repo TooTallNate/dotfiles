@@ -61,6 +61,7 @@ alias ll='ls $LS_OPTIONS -lF'
 alias l='ls $LS_OPTIONS -lAF'
 alias gits="git status"
 alias gitd="git diff"
+alias install-node="curl -s https://install-node.now.sh | sh -s --"
 
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
