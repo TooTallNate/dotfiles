@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 12.5,
 
     // font family with optional fallbacks
-    fontFamily: 'Hack',
+    fontFamily: 'Hack, Monaco, Menlo, monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     //cursorColor: 'pink',
