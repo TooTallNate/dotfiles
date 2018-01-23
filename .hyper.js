@@ -75,7 +75,7 @@ module.exports = {
     MaterialTheme: {
         // Set the theme variant,
         // OPTIONS: 'Darker', 'Palenight', ''
-        theme: 'Darker',
+        theme: 'darker',
  
         // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
         // OPTIONS: From 0.1 to 1
@@ -136,7 +136,6 @@ module.exports = {
   plugins: [
     "hyper-material-theme",
     "hyper-emoji"
-    //"hyper-solarized-dark"
   ],
 
   // in development, you can create a directory under
