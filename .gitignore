@@ -13,6 +13,7 @@
 /.docker
 /.ec2
 /.electron
+/.electron-gyp
 /.fontconfig
 /.gem
 /.htoprc
@@ -32,8 +33,10 @@
 /.python-eggs
 /.rnd
 /.shellshock
+/.ssh/authorized_keys
 /.subversion
 /.viminfo
+/.v8flags*
 /.Xauthority
 /.wireshark*
 /.travis
