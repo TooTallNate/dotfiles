@@ -1,7 +1,8 @@
 /*
 !/.*
-/.DS_Store
+/.*-cache
 /.*_history
+/.DS_Store
 /.CFUserTextEncoding
 /.adobe
 /.babel.json
@@ -16,6 +17,7 @@
 /.electron-gyp
 /.fontconfig
 /.gem
+/.gnupg
 /.htoprc
 /.hyper_plugins
 /.dbshell
@@ -28,7 +30,6 @@
 /.now.json
 /.npm
 /.npmrc
-/.pkg-cache
 /.private.env
 /.python-eggs
 /.rnd
@@ -41,6 +42,5 @@
 /.wireshark*
 /.travis
 /.Trash
-/.xo-cache
 /.yarnrc
 /.z*
