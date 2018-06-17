@@ -7,6 +7,7 @@
 /.adobe
 /.babel.json
 /.bash_sessions
+/.boto
 /.cups
 /.config
 /.cvspass
@@ -24,7 +25,8 @@
 /.jitsuconf
 /.kube
 /.lesshst
-/.nightscout-latest-entry
+/.nightscout-ps1
+/.nightscout-ps1.*
 /.node-gyp
 /.now
 /.now.json
