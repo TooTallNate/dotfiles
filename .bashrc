@@ -44,7 +44,10 @@ function __ps1_colored_exit_code {
   printf "\001${color}\002%03d\001${NO_COLOR}\002" "$exit_code"
 }
 
-export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(nightscout-ps1 2>/dev/null) \[$CYAN\]\w \[$MAGENTA\](\$(git rev-parse --abbrev-ref HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
+# https://github.com/TooTallNate/nightscout-ps1
+source ~/.nightscout-ps1
+
+export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(nightscout_ps1) \[$CYAN\]\w \[$MAGENTA\](\$(git rev-parse --abbrev-ref HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
