@@ -25,8 +25,7 @@
 /.jitsuconf
 /.kube
 /.lesshst
-/.nightscout-ps1
-/.nightscout-ps1.*
+/.nightscout*
 /.node-gyp
 /.now
 /.now.json
@@ -35,6 +34,7 @@
 /.private.env
 /.python-eggs
 /.rnd
+/.rocker
 /.shellshock
 /.ssh/authorized_keys
 /.subversion
