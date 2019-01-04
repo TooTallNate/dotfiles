@@ -15,6 +15,16 @@ syntax enable
 set nocompatible
 set modelines=0
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'leafgarland/typescript-vim'
+
 " Tabbing settings
 set tabstop=2
 set shiftwidth=2
