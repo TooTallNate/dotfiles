@@ -5,6 +5,7 @@
 /.DS_Store
 /.CFUserTextEncoding
 /.adobe
+/.aws
 /.babel.json
 /.bash_sessions
 /.boto
@@ -25,6 +26,7 @@
 /.jitsuconf
 /.kube
 /.lesshst
+/.netrc
 /.nightscout*
 /.node-gyp
 /.now
@@ -44,5 +46,7 @@
 /.wireshark*
 /.travis
 /.Trash
+/.yarn
 /.yarnrc
+/.vim/bundle
 /.z*
