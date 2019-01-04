@@ -7,8 +7,6 @@ filetype off
 execute pathogen#infect()
 call pathogen#helptags()
 
-filetype plugin indent on
-
 " Enable syntax highlighting
 syntax enable
 
@@ -24,6 +22,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'leafgarland/typescript-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Tabbing settings
 set tabstop=2
