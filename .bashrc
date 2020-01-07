@@ -1,3 +1,7 @@
+. "$(which import)"
+import "tootallnate/nightscout-ps1@3.1.0"
+import "zeit/rcurl@2.0.2"
+
 # Use a vi-style command line editing interface
 set -o vi
 
@@ -27,9 +31,6 @@ source ~/.git-completion
 BOLD="$(tput bold 2>/dev/null || echo '')"
 RED="$(tput setaf 1 2>/dev/null || echo '')"
 GREEN="$(tput setaf 2 2>/dev/null || echo '')"
-DARK_GREEN="\033[1;32m"
-YELLOW="$(tput setaf 3 2>/dev/null || echo '')"
-BLUE="$(tput setaf 4 2>/dev/null || echo '')"
 MAGENTA="$(tput setaf 5 2>/dev/null || echo '')"
 CYAN="$(tput setaf 6 2>/dev/null || echo '')"
 NO_COLOR="$(tput sgr0 2>/dev/null || echo '')"
@@ -48,9 +49,6 @@ function __ps1_colored_exit_code {
   printf "\001${color}\002%03d\001${NO_COLOR}\002" "$exit_code"
 }
 
-# https://github.com/TooTallNate/nightscout-ps1
-source ~/.nightscout-ps1
-
 export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(nightscout_ps1) \[$CYAN\]\w \[$MAGENTA\](\$(git rev-parse --abbrev-ref HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
@@ -68,7 +66,8 @@ alias ll='ls $LS_OPTIONS -lF'
 alias l='ls $LS_OPTIONS -lAF'
 alias gits="git status"
 alias gitd="git diff"
-alias install-node="curl -s https://install-node.now.sh | sh -s --"
+alias install-node="curl -sfLS https://install-node.now.sh | sh -s --"
+alias install-npm="curl -sfLS https://npmjs.org/install.sh | sh -s --"
 
 export NODE_ENV='development'
 export GOPATH="$HOME/go"
