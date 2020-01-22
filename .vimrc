@@ -48,6 +48,7 @@ set gdefault
 set ttyfast
 set ruler
 set backspace=indent,eol,start
+set backupcopy=yes
 
 " Status bar
 set laststatus=2
