@@ -9,3 +9,5 @@
 	default = current
 [core]
 	excludesfile = ~/.gitignore-global
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
