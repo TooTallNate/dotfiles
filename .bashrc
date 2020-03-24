@@ -1,13 +1,10 @@
 . "$(which import)"
+import "tootallnate/nexec@1.1.0"
 import "tootallnate/nightscout-ps1@3.1.0"
 import "zeit/rcurl@2.0.2"
 
 # Use a vi-style command line editing interface
 set -o vi
-
-source "$(which import)"
-import "zeit/rcurl@2.0.0"
-import "tootallnate/nexec@1.1.0"
 
 # Colored `grep` output
 export GREP_OPTIONS='--color=auto'
