@@ -1,6 +1,6 @@
 . "$(which import)"
-import "tootallnate/nexec@1.1.0"
-import "tootallnate/nightscout-ps1@3.1.0"
+import "tootallnate/nexec@1.2.0"
+import "tootallnate/t1"
 import "zeit/rcurl@2.0.2"
 
 # Use a vi-style command line editing interface
@@ -46,7 +46,7 @@ function __ps1_colored_exit_code {
   printf "\001${color}\002%03d\001${NO_COLOR}\002" "$exit_code"
 }
 
-export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(nightscout_ps1) \[$CYAN\]\w \[$MAGENTA\](\$(git rev-parse --abbrev-ref HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
+export PS1="\n\$(__ps1_colored_exit_code) ▲ \$(t1_ps1) \[$CYAN\]\w \[$MAGENTA\](\$(git rev-parse --abbrev-ref HEAD 2>/dev/null))\[$NO_COLOR\] \[${BOLD}\]\$\[$NO_COLOR\] "
 
 # for `ls` (BSD, OSX)
 export CLICOLOR=1
