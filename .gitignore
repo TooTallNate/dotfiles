@@ -10,11 +10,14 @@
 /.babel.json
 /.bash_sessions
 /.boto
+/.cargo
 /.cups
 /.config
 /.cvspass
 /.cvsps
 /.docker
+/.dotnet
+/.dts
 /.ec2
 /.electron
 /.electron-gyp
@@ -38,10 +41,12 @@
 /.python-eggs
 /.rnd
 /.rocker
+/.rustup
 /.shellshock
 /.ssh/authorized_keys
 /.subversion
 /.viminfo
+/.vscode
 /.v8flags*
 /.Xauthority
 /.wireshark*
