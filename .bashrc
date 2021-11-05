@@ -10,7 +10,7 @@ set -o vi
 export GREP_OPTIONS='--color=auto'
 
 # Make locally installed npm modules' bin files be available in $PATH
-export PATH="./node_modules/.bin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="./node_modules/.bin:/opt/local/libexec/gnubin:/opt/homebrew/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Make gnu coreutils from Homebrew come first in the PATH on OS X
 if type brew >/dev/null 2>&1; then
