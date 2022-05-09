@@ -16,6 +16,7 @@
 /.config
 /.cvspass
 /.cvsps
+/.degit
 /.docker
 /.dotnet
 /.dts
@@ -38,6 +39,8 @@
 /.now.json
 /.npm
 /.npmrc
+/.pnpm-state
+/.pnpm-store
 /.private.env
 /.python-eggs
 /.rnd
@@ -51,6 +54,7 @@
 /.v8flags*
 /.Xauthority
 /.wireshark*
+/.wrangler
 /.travis
 /.Trash
 /.yarn
