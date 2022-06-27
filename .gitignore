@@ -39,6 +39,7 @@
 /.now.json
 /.npm
 /.npmrc
+/.nuxtrc
 /.pnpm-state
 /.pnpm-store
 /.private.env
