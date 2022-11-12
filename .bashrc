@@ -1,7 +1,7 @@
 . "$(which import)"
 import "tootallnate/nexec@1.2.0"
 import "tootallnate/t1"
-import "zeit/rcurl@2.0.2"
+import "vercel/rcurl@2.0.2"
 
 # Use a vi-style command line editing interface
 set -o vi
