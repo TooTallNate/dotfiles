@@ -74,8 +74,6 @@ alias gitd="git diff"
 alias install-node="curl -sfLS https://install-node.now.sh | sh -s --"
 alias install-npm="curl -sfLS https://npmjs.org/install.sh | sh -s --"
 
-export NODE_ENV='development'
-
 if type hub >/dev/null 2>&1; then
   alias git=hub
 fi
