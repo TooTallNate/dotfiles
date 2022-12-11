@@ -24,6 +24,7 @@
 /.electron
 /.electron-gyp
 /.fontconfig
+/.git-credentials
 /.gem
 /.gnupg
 /.htoprc
