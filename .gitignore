@@ -11,8 +11,11 @@
 /.babel.json
 /.bash_sessions
 /.boto
+/.bun/install/cache
+/.bundle/cache
 /.cargo
 /.cups
+/.cursor
 /.config
 /.cvspass
 /.cvsps
